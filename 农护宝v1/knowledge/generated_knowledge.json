@@ -1,0 +1,382 @@
+{
+  "Apple Scab": {
+    "label": "Apple Scab",
+    "crop": "苹果",
+    "disease": "黑星病",
+    "symptoms": "需要补充苹果黑星病的症状描述",
+    "description": "需要补充苹果黑星病的病理描述",
+    "prevention": "需要补充苹果黑星病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Apple with Black Rot": {
+    "label": "Apple with Black Rot",
+    "crop": "苹果",
+    "disease": "黑腐病",
+    "symptoms": "需要补充苹果黑腐病的症状描述",
+    "description": "需要补充苹果黑腐病的病理描述",
+    "prevention": "需要补充苹果黑腐病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Cedar Apple Rust": {
+    "label": "Cedar Apple Rust",
+    "crop": "苹果",
+    "disease": "锈病",
+    "symptoms": "需要补充苹果锈病的症状描述",
+    "description": "需要补充苹果锈病的病理描述",
+    "prevention": "需要补充苹果锈病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Apple": {
+    "label": "Healthy Apple",
+    "crop": "苹果",
+    "disease": "健康",
+    "symptoms": "需要补充苹果健康的症状描述",
+    "description": "需要补充苹果健康的病理描述",
+    "prevention": "需要补充苹果健康的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Blueberry Plant": {
+    "label": "Healthy Blueberry Plant",
+    "crop": "蓝莓",
+    "disease": "健康",
+    "symptoms": "需要补充蓝莓健康的症状描述",
+    "description": "需要补充蓝莓健康的病理描述",
+    "prevention": "需要补充蓝莓健康的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Cherry with Powdery Mildew": {
+    "label": "Cherry with Powdery Mildew",
+    "crop": "樱桃",
+    "disease": "白粉病",
+    "symptoms": "需要补充樱桃白粉病的症状描述",
+    "description": "需要补充樱桃白粉病的病理描述",
+    "prevention": "需要补充樱桃白粉病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Cherry Plant": {
+    "label": "Healthy Cherry Plant",
+    "crop": "樱桃",
+    "disease": "健康",
+    "symptoms": "需要补充樱桃健康的症状描述",
+    "description": "需要补充樱桃健康的病理描述",
+    "prevention": "需要补充樱桃健康的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Corn (Maize) with Cercospora and Gray Leaf Spot": {
+    "label": "Corn (Maize) with Cercospora and Gray Leaf Spot",
+    "crop": "玉米",
+    "disease": "灰斑病",
+    "symptoms": "需要补充玉米灰斑病的症状描述",
+    "description": "需要补充玉米灰斑病的病理描述",
+    "prevention": "需要补充玉米灰斑病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Corn (Maize) with Common Rust": {
+    "label": "Corn (Maize) with Common Rust",
+    "crop": "玉米",
+    "disease": "普通锈病",
+    "symptoms": "需要补充玉米普通锈病的症状描述",
+    "description": "需要补充玉米普通锈病的病理描述",
+    "prevention": "需要补充玉米普通锈病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Corn (Maize) with Northern Leaf Blight": {
+    "label": "Corn (Maize) with Northern Leaf Blight",
+    "crop": "玉米",
+    "disease": "大斑病",
+    "symptoms": "需要补充玉米大斑病的症状描述",
+    "description": "需要补充玉米大斑病的病理描述",
+    "prevention": "需要补充玉米大斑病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Corn (Maize) Plant": {
+    "label": "Healthy Corn (Maize) Plant",
+    "crop": "玉米",
+    "disease": "健康",
+    "symptoms": "需要补充玉米健康的症状描述",
+    "description": "需要补充玉米健康的病理描述",
+    "prevention": "需要补充玉米健康的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Grape with Black Rot": {
+    "label": "Grape with Black Rot",
+    "crop": "葡萄",
+    "disease": "黑腐病",
+    "symptoms": "需要补充葡萄黑腐病的症状描述",
+    "description": "需要补充葡萄黑腐病的病理描述",
+    "prevention": "需要补充葡萄黑腐病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Grape with Esca (Black Measles)": {
+    "label": "Grape with Esca (Black Measles)",
+    "crop": "葡萄",
+    "disease": "黑痘病",
+    "symptoms": "需要补充葡萄黑痘病的症状描述",
+    "description": "需要补充葡萄黑痘病的病理描述",
+    "prevention": "需要补充葡萄黑痘病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Grape with Isariopsis Leaf Spot": {
+    "label": "Grape with Isariopsis Leaf Spot",
+    "crop": "葡萄",
+    "disease": "褐斑病",
+    "symptoms": "需要补充葡萄褐斑病的症状描述",
+    "description": "需要补充葡萄褐斑病的病理描述",
+    "prevention": "需要补充葡萄褐斑病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Grape Plant": {
+    "label": "Healthy Grape Plant",
+    "crop": "葡萄",
+    "disease": "健康",
+    "symptoms": "需要补充葡萄健康的症状描述",
+    "description": "需要补充葡萄健康的病理描述",
+    "prevention": "需要补充葡萄健康的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Orange with Citrus Greening": {
+    "label": "Orange with Citrus Greening",
+    "crop": "橙子",
+    "disease": "黄龙病",
+    "symptoms": "需要补充橙子黄龙病的症状描述",
+    "description": "需要补充橙子黄龙病的病理描述",
+    "prevention": "需要补充橙子黄龙病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Peach with Bacterial Spot": {
+    "label": "Peach with Bacterial Spot",
+    "crop": "桃子",
+    "disease": "细菌性斑点病",
+    "symptoms": "需要补充桃子细菌性斑点病的症状描述",
+    "description": "需要补充桃子细菌性斑点病的病理描述",
+    "prevention": "需要补充桃子细菌性斑点病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Peach Plant": {
+    "label": "Healthy Peach Plant",
+    "crop": "桃子",
+    "disease": "健康",
+    "symptoms": "需要补充桃子健康的症状描述",
+    "description": "需要补充桃子健康的病理描述",
+    "prevention": "需要补充桃子健康的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Bell Pepper with Bacterial Spot": {
+    "label": "Bell Pepper with Bacterial Spot",
+    "crop": "甜椒",
+    "disease": "细菌性斑点病",
+    "symptoms": "需要补充甜椒细菌性斑点病的症状描述",
+    "description": "需要补充甜椒细菌性斑点病的病理描述",
+    "prevention": "需要补充甜椒细菌性斑点病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Bell Pepper Plant": {
+    "label": "Healthy Bell Pepper Plant",
+    "crop": "甜椒",
+    "disease": "健康",
+    "symptoms": "需要补充甜椒健康的症状描述",
+    "description": "需要补充甜椒健康的病理描述",
+    "prevention": "需要补充甜椒健康的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Potato with Early Blight": {
+    "label": "Potato with Early Blight",
+    "crop": "马铃薯",
+    "disease": "早疫病",
+    "symptoms": "需要补充马铃薯早疫病的症状描述",
+    "description": "需要补充马铃薯早疫病的病理描述",
+    "prevention": "需要补充马铃薯早疫病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Potato with Late Blight": {
+    "label": "Potato with Late Blight",
+    "crop": "马铃薯",
+    "disease": "晚疫病",
+    "symptoms": "需要补充马铃薯晚疫病的症状描述",
+    "description": "需要补充马铃薯晚疫病的病理描述",
+    "prevention": "需要补充马铃薯晚疫病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Potato Plant": {
+    "label": "Healthy Potato Plant",
+    "crop": "马铃薯",
+    "disease": "健康",
+    "symptoms": "需要补充马铃薯健康的症状描述",
+    "description": "需要补充马铃薯健康的病理描述",
+    "prevention": "需要补充马铃薯健康的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Raspberry Plant": {
+    "label": "Healthy Raspberry Plant",
+    "crop": "树莓",
+    "disease": "健康",
+    "symptoms": "需要补充树莓健康的症状描述",
+    "description": "需要补充树莓健康的病理描述",
+    "prevention": "需要补充树莓健康的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Soybean Plant": {
+    "label": "Healthy Soybean Plant",
+    "crop": "大豆",
+    "disease": "健康",
+    "symptoms": "需要补充大豆健康的症状描述",
+    "description": "需要补充大豆健康的病理描述",
+    "prevention": "需要补充大豆健康的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Squash with Powdery Mildew": {
+    "label": "Squash with Powdery Mildew",
+    "crop": "南瓜",
+    "disease": "白粉病",
+    "symptoms": "需要补充南瓜白粉病的症状描述",
+    "description": "需要补充南瓜白粉病的病理描述",
+    "prevention": "需要补充南瓜白粉病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Strawberry with Leaf Scorch": {
+    "label": "Strawberry with Leaf Scorch",
+    "crop": "草莓",
+    "disease": "叶焦病",
+    "symptoms": "需要补充草莓叶焦病的症状描述",
+    "description": "需要补充草莓叶焦病的病理描述",
+    "prevention": "需要补充草莓叶焦病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Strawberry Plant": {
+    "label": "Healthy Strawberry Plant",
+    "crop": "草莓",
+    "disease": "健康",
+    "symptoms": "需要补充草莓健康的症状描述",
+    "description": "需要补充草莓健康的病理描述",
+    "prevention": "需要补充草莓健康的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Tomato with Bacterial Spot": {
+    "label": "Tomato with Bacterial Spot",
+    "crop": "番茄",
+    "disease": "细菌性斑点病",
+    "symptoms": "需要补充番茄细菌性斑点病的症状描述",
+    "description": "需要补充番茄细菌性斑点病的病理描述",
+    "prevention": "需要补充番茄细菌性斑点病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Tomato with Early Blight": {
+    "label": "Tomato with Early Blight",
+    "crop": "番茄",
+    "disease": "早疫病",
+    "symptoms": "需要补充番茄早疫病的症状描述",
+    "description": "需要补充番茄早疫病的病理描述",
+    "prevention": "需要补充番茄早疫病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Tomato with Late Blight": {
+    "label": "Tomato with Late Blight",
+    "crop": "番茄",
+    "disease": "晚疫病",
+    "symptoms": "需要补充番茄晚疫病的症状描述",
+    "description": "需要补充番茄晚疫病的病理描述",
+    "prevention": "需要补充番茄晚疫病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Tomato with Leaf Mold": {
+    "label": "Tomato with Leaf Mold",
+    "crop": "番茄",
+    "disease": "叶霉病",
+    "symptoms": "需要补充番茄叶霉病的症状描述",
+    "description": "需要补充番茄叶霉病的病理描述",
+    "prevention": "需要补充番茄叶霉病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Tomato with Septoria Leaf Spot": {
+    "label": "Tomato with Septoria Leaf Spot",
+    "crop": "番茄",
+    "disease": "斑枯病",
+    "symptoms": "需要补充番茄斑枯病的症状描述",
+    "description": "需要补充番茄斑枯病的病理描述",
+    "prevention": "需要补充番茄斑枯病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Tomato with Spider Mites or Two-spotted Spider Mite": {
+    "label": "Tomato with Spider Mites or Two-spotted Spider Mite",
+    "crop": "番茄",
+    "disease": "红蜘蛛",
+    "symptoms": "需要补充番茄红蜘蛛的症状描述",
+    "description": "需要补充番茄红蜘蛛的病理描述",
+    "prevention": "需要补充番茄红蜘蛛的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Tomato with Target Spot": {
+    "label": "Tomato with Target Spot",
+    "crop": "番茄",
+    "disease": "轮纹病",
+    "symptoms": "需要补充番茄轮纹病的症状描述",
+    "description": "需要补充番茄轮纹病的病理描述",
+    "prevention": "需要补充番茄轮纹病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Tomato Yellow Leaf Curl Virus": {
+    "label": "Tomato Yellow Leaf Curl Virus",
+    "crop": "番茄",
+    "disease": "黄化曲叶病毒病",
+    "symptoms": "需要补充番茄黄化曲叶病毒病的症状描述",
+    "description": "需要补充番茄黄化曲叶病毒病的病理描述",
+    "prevention": "需要补充番茄黄化曲叶病毒病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Tomato Mosaic Virus": {
+    "label": "Tomato Mosaic Virus",
+    "crop": "番茄",
+    "disease": "花叶病毒病",
+    "symptoms": "需要补充番茄花叶病毒病的症状描述",
+    "description": "需要补充番茄花叶病毒病的病理描述",
+    "prevention": "需要补充番茄花叶病毒病的防治方案",
+    "source": "llm",
+    "generated": true
+  },
+  "Healthy Tomato Plant": {
+    "label": "Healthy Tomato Plant",
+    "crop": "番茄",
+    "disease": "健康",
+    "symptoms": "需要补充番茄健康的症状描述",
+    "description": "需要补充番茄健康的病理描述",
+    "prevention": "需要补充番茄健康的防治方案",
+    "source": "llm",
+    "generated": true
+  }
+}

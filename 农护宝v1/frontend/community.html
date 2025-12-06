@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交流社区 - 农护宝</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="geometric-bg">
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        <div class="geometric-shape shape-3"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L28 8L16 14L4 8L16 2Z" fill="currentColor" opacity="0.8"/>
+                            <path d="M16 14L28 8V24L16 30L4 24V8L16 14Z" fill="currentColor" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>农护宝</h1>
+                        <span>智能农业诊断系统</span>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">首页</a>
+                    <a href="/diagnose" class="nav-link">诊断</a>
+                    <a href="/qa" class="nav-link">问答</a>
+                    <a href="/kb" class="nav-link">知识库</a>
+                    <a href="/community" class="nav-link active">交流</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="page-header">
+                <h2 class="page-title">交流社区</h2>
+                <p class="page-subtitle">发布帖子，参与讨论，分享经验</p>
+            </section>
+
+            <div class="diagnose-layout">
+                <div class="upload-card">
+                    <div class="upload-header">
+                        <h3>发布帖子</h3>
+                        <div class="upload-info">
+                            <span>登录后可发帖与评论</span>
+                        </div>
+                    </div>
+                    <form id="post-form" class="upload-form">
+                        <div class="form-controls">
+                            <div class="control-group">
+                                <label class="control-label">标题</label>
+                                <input id="post-title" class="text-input" placeholder="请输入帖子标题" required />
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">内容</label>
+                                <textarea id="post-content" class="text-input" rows="5" placeholder="请输入帖子内容" required></textarea>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">标签</label>
+                                <input id="post-tags" class="text-input" placeholder="以空格或逗号分隔" />
+                            </div>
+                            <button type="submit" class="diagnose-button">
+                                <span class="button-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M10 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </span>
+                                <span>发布</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="results-card">
+                    <div class="results-header">
+                        <h3>最新帖子</h3>
+                        <div class="status-indicator" id="community-status">
+                            <span class="status-text">加载中...</span>
+                        </div>
+                    </div>
+                    <div id="posts-list" class="answers-container"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 农护宝 - 智能农业诊断系统</p>
+        </div>
+    </footer>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

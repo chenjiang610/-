@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pillow
+transformers
+requests
+pydantic
+python-multipart
+sqlalchemy

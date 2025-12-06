@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI问答 - 农护宝</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="geometric-bg">
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        <div class="geometric-shape shape-3"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L28 8L16 14L4 8L16 2Z" fill="currentColor" opacity="0.8"/>
+                            <path d="M16 14L28 8V24L16 30L4 24V8L16 14Z" fill="currentColor" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>农护宝</h1>
+                        <span>智能农业诊断系统</span>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">首页</a>
+                    <a href="/diagnose" class="nav-link">诊断</a>
+                    <a href="/qa" class="nav-link active">问答</a>
+                    <a href="/kb" class="nav-link">知识库</a>
+                    <a href="/community" class="nav-link">交流</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="page-header">
+                <h2 class="page-title">AI问答</h2>
+                <p class="page-subtitle">基于农业知识库的智能问答系统</p>
+            </section>
+
+            <div class="qa-layout">
+                <div class="question-card">
+                    <div class="card-header">
+                        <h3>提出问题</h3>
+                        <div class="quick-questions">
+                            <span class="quick-tag">快速提问：</span>
+                            <button class="quick-question" data-question="番茄晚疫病如何防治？">番茄晚疫病</button>
+                            <button class="quick-question" data-question="黄瓜霜霉病的症状是什么？">黄瓜霜霉病</button>
+                            <button class="quick-question" data-question="如何预防水稻稻瘟病？">水稻稻瘟病</button>
+                        </div>
+                    </div>
+                    
+                    <form id="qa-form" class="question-form">
+                        <div class="question-input-group">
+                            <textarea 
+                                id="question" 
+                                class="question-input" 
+                                placeholder="请输入您的农业问题，例如：番茄叶片发黄是什么原因？如何治疗？"
+                                rows="4"
+                                required
+                            ></textarea>
+                            <div class="input-actions">
+                                <div class="input-info">
+                                    <span class="char-count">0 / 500</span>
+                                </div>
+                                <button type="submit" class="ask-button">
+                                    <span class="button-icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10 2L18 10L10 18L2 10L10 2Z" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M10 6V14M6 10H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </span>
+                                    <span>提问</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div class="suggested-questions">
+                        <h4>推荐问题</h4>
+                        <div class="suggestion-tags">
+                            <button class="suggestion-tag" data-question="什么是作物轮作？有什么好处？">作物轮作</button>
+                            <button class="suggestion-tag" data-question="如何识别植物缺素症状？">缺素症状</button>
+                            <button class="suggestion-tag" data-question="有机农业和常规农业的区别？">有机农业</button>
+                            <button class="suggestion-tag" data-question="农药的安全间隔期是什么？">安全间隔期</button>
+                            <button class="suggestion-tag" data-question="土壤改良的方法有哪些？">土壤改良</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="answer-card">
+                    <div class="answer-header">
+                        <h3>AI回答</h3>
+                        <div class="answer-controls">
+                            <div class="status-indicator" id="qa-status">
+                                <span class="status-text">等待提问</span>
+                            </div>
+                            <button class="clear-button" id="clear-answer">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M12 4L4 12M4 4L12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="answer-content" id="answer-content">
+                        <div class="empty-state">
+                            <div class="empty-icon">
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+                                    <path d="M40 24L48 32L40 40L32 32L40 24Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+                                    <circle cx="40" cy="56" r="4" fill="currentColor" opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <p class="empty-text">请输入农业相关问题</p>
+                            <p class="empty-subtext">AI将基于农业知识库为您提供专业解答</p>
+                        </div>
+                    </div>
+                    
+                    <div id="qa-answer" class="answer-container"></div>
+                    <div id="qa-graph" class="graph-container"></div>
+                    
+                    <div class="answer-actions" id="answer-actions" style="display: none;">
+                        <div class="action-buttons">
+                            <button class="action-button like-button">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 2L10 6H14L11 9L12 14L8 11L4 14L5 9L2 6H6L8 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>有用</span>
+                            </button>
+                            <button class="action-button dislike-button">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 14L6 10H2L5 7L4 2L8 5L12 2L11 7L14 10H10L8 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>无用</span>
+                            </button>
+                            <button class="action-button copy-button" id="copy-answer">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M12 4H8C6.89543 4 6 4.89543 6 6V10C6 11.1046 6.89543 12 8 12H12C13.1046 12 14 11.1046 14 10V6C14 4.89543 13.1046 4 12 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 8V12C4 13.1046 4.89543 14 6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>复制</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 农护宝 - 智能农业诊断系统</p>
+        </div>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

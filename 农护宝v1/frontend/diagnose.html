@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能诊断 - 农护宝</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="geometric-bg">
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        <div class="geometric-shape shape-3"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L28 8L16 14L4 8L16 2Z" fill="currentColor" opacity="0.8"/>
+                            <path d="M16 14L28 8V24L16 30L4 24V8L16 14Z" fill="currentColor" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>农护宝</h1>
+                        <span>智能农业诊断系统</span>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">首页</a>
+                    <a href="/diagnose" class="nav-link active">诊断</a>
+                    <a href="/qa" class="nav-link">问答</a>
+                    <a href="/kb" class="nav-link">知识库</a>
+                    <a href="/community" class="nav-link">交流</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="page-header">
+                <h2 class="page-title">智能诊断</h2>
+                <p class="page-subtitle">上传作物图片，AI智能识别病害类型</p>
+            </section>
+
+            <div class="diagnose-layout">
+                <div class="upload-card">
+                    <div class="upload-header">
+                        <h3>上传图片</h3>
+                        <div class="upload-info">
+                            <span>支持 JPG、PNG 格式</span>
+                            <span>最大 10MB</span>
+                        </div>
+                    </div>
+                    
+                    <form id="diagnose-form" class="upload-form">
+                        <div class="file-upload-area" id="upload-area">
+                            <div class="upload-placeholder" id="upload-placeholder">
+                                <div class="upload-icon">
+                                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                        <path d="M32 12L48 28L32 44L16 28L32 12Z" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                                        <path d="M32 44V52" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M48 28H56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M8 28H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <p class="upload-text">拖拽图片到此处或点击上传</p>
+                                <p class="upload-subtext">选择清晰的作物病害图片</p>
+                            </div>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="image-file" accept="image/*" class="file-input" required>
+                                <button type="button" class="upload-button">选择文件</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-controls">
+                            <div class="control-group">
+                                <label for="topk" class="control-label">识别数量</label>
+                                <select id="topk" class="control-select">
+                                    <option value="3">Top 3</option>
+                                    <option value="5" selected>Top 5</option>
+                                    <option value="10">Top 10</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="diagnose-button">
+                                <span class="button-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </span>
+                                <span>开始诊断</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="results-card">
+                    <div class="results-header">
+                        <h3>诊断结果</h3>
+                        <div class="status-indicator" id="diagnose-status">
+                            <span class="status-text">等待上传图片</span>
+                        </div>
+                    </div>
+                    
+                    <div class="results-content" id="results-content">
+                        <div class="empty-state">
+                            <div class="empty-icon">
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+                                    <path d="M40 24V40L52 52" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+                                    <circle cx="40" cy="40" r="8" fill="currentColor" opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <p class="empty-text">上传图片后将显示诊断结果</p>
+                            <p class="empty-subtext">AI将识别可能的病害类型并提供详细信息</p>
+                        </div>
+                    </div>
+                    
+                    <div id="predictions" class="predictions-container"></div>
+                    <div id="report" class="report-container"></div>
+                    <div class="glass-card kb-history-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>历史识别记录</h3>
+                                <p class="card-subtitle">展示最近的识别历史与统计概览</p>
+                            </div>
+                            <div class="status-indicator" id="kb-history-status"><span class="status-text">等待加载</span></div>
+                        </div>
+                        <div id="kb-history-summary" class="kb-summary"></div>
+                        <div id="kb-history-list" class="kb-entry-list"></div>
+                    </div>
+                    <div class="glass-card kb-insights-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>智能分析</h3>
+                                <p class="card-subtitle">基于历史记录的风险预测与防治建议</p>
+                            </div>
+                            <div class="status-indicator" id="kb-insights-status"><span class="status-text">等待分析</span></div>
+                        </div>
+                        <div id="kb-insights" class="kb-featured-report"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 农护宝 - 智能农业诊断系统</p>
+        </div>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

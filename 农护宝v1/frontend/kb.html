@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识库管理 - 农护宝</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="geometric-bg">
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        <div class="geometric-shape shape-3"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L28 8L16 14L4 8L16 2Z" fill="currentColor" opacity="0.8"/>
+                            <path d="M16 14L28 8V24L16 30L4 24V8L16 14Z" fill="currentColor" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>农护宝</h1>
+                        <span>智能农业诊断系统</span>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">首页</a>
+                    <a href="/diagnose" class="nav-link">诊断</a>
+                    <a href="/qa" class="nav-link">问答</a>
+                    <a href="/kb" class="nav-link active">知识库</a>
+                    <a href="/community" class="nav-link">交流</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="page-header">
+                <h2 class="page-title">知识库查询</h2>
+                <p class="page-subtitle">快速检索病虫害知识，并自动生成可视化知识图谱</p>
+            </section>
+
+            <div class="kb-layout">
+                <div class="glass-card kb-query-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>智能查询</h3>
+                            <p class="card-subtitle">输入作物或病害关键词，获取结构化知识</p>
+                        </div>
+                    </div>
+
+                    <form id="kb-search-form" class="kb-search-form">
+                        <div class="kb-search-bar">
+                            <div class="search-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="13.5" y1="13.5" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <input type="text" id="kb-keyword" class="kb-input" placeholder="例如：番茄晚疫病、防治锈病、柑橘黄龙病..." maxlength="60" required>
+                            <button type="submit" class="ask-button">查询知识库</button>
+                        </div>
+                        <p class="kb-hint">系统自动完成知识导入与更新，您只需专注于检索与分析</p>
+                    </form>
+
+                    <div class="kb-trending">
+                        <span class="quick-tag">热门查询：</span>
+                        <div class="kb-trend-list">
+                            <button type="button" class="kb-trend-button" data-keyword="番茄晚疫病">番茄晚疫病</button>
+                            <button type="button" class="kb-trend-button" data-keyword="小麦条锈病">小麦条锈病</button>
+                            <button type="button" class="kb-trend-button" data-keyword="水稻稻瘟病">水稻稻瘟病</button>
+                            <button type="button" class="kb-trend-button" data-keyword="黄瓜霜霉病">黄瓜霜霉病</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card kb-results-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>查询结果</h3>
+                            <p class="card-subtitle" id="kb-result-title">等待查询</p>
+                        </div>
+                        <div class="status-indicator" id="kb-search-status">
+                            <span class="status-text">尚未检索</span>
+                        </div>
+                    </div>
+
+                    <div id="kb-result-placeholder" class="empty-state">
+                        <div class="empty-icon">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+                                <path d="M28 36H52M28 44H40" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+                                <circle cx="40" cy="26" r="6" fill="currentColor" opacity="0.3"/>
+                            </svg>
+                        </div>
+                        <p class="empty-text">输入关键词即可开始检索</p>
+                        <p class="empty-subtext">系统将返回知识卡片与自动生成的知识图谱</p>
+                    </div>
+
+                    <div id="kb-result-summary" class="kb-summary"></div>
+                    <div id="kb-featured-report" class="kb-featured-report"></div>
+                    <div id="kb-result-list" class="kb-entry-list"></div>
+                    <div id="kb-graph" class="kb-graph"></div>
+                </div>
+
+                <div class="glass-card kb-history-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>历史识别记录</h3>
+                            <p class="card-subtitle">展示最近的识别历史与统计概览</p>
+                        </div>
+                        <div class="status-indicator" id="kb-history-status">
+                            <span class="status-text">等待加载</span>
+                        </div>
+                    </div>
+                    <div id="kb-history-summary" class="kb-summary"></div>
+                    <div id="kb-history-list" class="kb-entry-list"></div>
+                </div>
+
+                <div class="glass-card kb-insights-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>智能分析</h3>
+                            <p class="card-subtitle">基于历史记录的风险预测与防治建议</p>
+                        </div>
+                        <div class="status-indicator" id="kb-insights-status">
+                            <span class="status-text">等待分析</span>
+                        </div>
+                    </div>
+                    <div id="kb-insights" class="kb-featured-report"></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 农护宝 - 智能农业诊断系统</p>
+        </div>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
